@@ -1,0 +1,29 @@
+{
+  "misiones": [
+    {
+      "id": "mision_lobo",
+      "titulo": "Cazar al lobo alfa",
+      "descripcion": "Un lobo gigante amenaza a los aldeanos.",
+      "nivel_recomendado": 3,
+      "recompensa": {
+        "oro": 150,
+        "experiencia": 300,
+        "objeto": "Colmillo del Lobo Alfa"
+      },
+      "pasos": [
+        {
+          "tipo": "combatir",
+          "objetivo": "Derrotar al lobo alfa"
+        },
+        {
+          "tipo": "interaccion",
+          "objetivo": "Hablar con el aldeano jefe"
+        },
+        {
+          "tipo": "recompensa",
+          "objetivo": "Abrir el cofre de recompensa"
+        }
+      ]
+    }
+  ]
+}
