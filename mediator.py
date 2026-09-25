@@ -30,6 +30,11 @@ class MediatorMision:
             "ACCION_INVALIDA": self._accion_invalida
         }
 
+    def eleccion_usuario(self, eleccion):
+        self.TIPO_A_OBJETIVO[eleccion]()
+
+
+
     def _validar_pasos(self, pasos):
         for idx, paso in enumerate(pasos):
             if "tipo" not in paso:
@@ -49,19 +54,24 @@ class MediatorMision:
 
         tipo = self.pasos[self.indice]['tipo']
         return TIPO_A_ESTADO[tipo]()
+
+    
     
     def avanzar(self):
         self.indice += 1
+
         if self.indice < len(self.pasos):
             self.state = self._crear_estado_actual()
-            self.ejecutar_paso_actual()
+
         else:
             print("Misión finalizada.")
             self.terminada = True
 
-    def ejecutar_paso_actual(self):
-        tipo = self.pasos[self.indice]['tipo']
-        self.TIPO_A_OBJETIVO[tipo]()
+    def reiniciar_mision(self):
+        self.indice = 0
+        self.state = self._crear_estado_actual()
+        self.terminada = False
+
 
     def _accion_enemigo_derrotado(self):
         print("Enemigo derrotado... avanzando al siguiente nivel.")
