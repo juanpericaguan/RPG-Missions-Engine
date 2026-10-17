@@ -6,6 +6,12 @@ Arquitectura basada en State y Mediator
 
 Este proyecto implementa un sistema de misiones secuenciales inspirado en videojuegos RPG, desarrollado en Python y enfocado en arquitectura de software, programación orientada a objetos y patrones de diseño.
 
+🎬 Demo del proyecto
+
+Mira el sistema de misiones en funcionamiento:
+[▶️ Ver DEMO en YouTube](https://youtu.be/NPxYy6QJUDk)
+
+
 El objetivo principal no es el juego en sí, sino demostrar cómo organizar un sistema donde:
 
 - El comportamiento depende del estado actual de la misión.
